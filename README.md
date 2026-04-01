@@ -1,16 +1,15 @@
-<h2 align="center">🚧 This repository has been archived 🚧</h2>
+## catppuccin-gtk-flake
 
-GTK, while being one of our most popular ports, can only be described as a
-nightmare to consistently theme and maintain. To understand why this port has
-been archived, please see [#262](https://github.com/catppuccin/gtk/issues/262).
+This repository packages Catppuccin GTK themes as a standalone Nix flake.
 
-We recognise that users will still want to theme GTK in Catppuccin. This
-repository has been heavily refactored to be more maintainable and
-understandable by others. The usage and installation instructions can be found
-in [docs/USAGE.md](/docs/USAGE.md) and a detailed description of the codebase
-structure can be found in [docs/ARCHITECTURE.md](/docs/ARCHITECTURE.md).
+It is based on the upstream
+[catppuccin/gtk](https://github.com/catppuccin/gtk) source tree, while adding
+flake outputs for direct use from NixOS and Home Manager.
 
-Good luck.
+The original project documentation is still useful for understanding the theme
+structure and build process. Usage and installation details are available in
+[docs/USAGE.md](/docs/USAGE.md), and the codebase layout is described in
+[docs/ARCHITECTURE.md](/docs/ARCHITECTURE.md).
 
 ## Nix flake output
 
