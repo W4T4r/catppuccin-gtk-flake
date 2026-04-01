@@ -12,6 +12,33 @@ structure can be found in [docs/ARCHITECTURE.md](/docs/ARCHITECTURE.md).
 
 Good luck.
 
+## Nix flake output
+
+This fork also exposes prebuilt Nix flake packages.
+
+- `packages.<system>.default`: bundle of all Catppuccin GTK themes using the
+  standard size and no extra tweaks
+- `packages.<system>.bundled`: same as `default`
+- `packages.<system>.catppuccin-<flavor>-<accent>-standard`: one theme variant
+
+Example:
+
+```nix
+{
+  inputs.catppuccin-gtk.url = "github:W4T4r/catppuccin-gtk-flake";
+
+  outputs = { self, nixpkgs, catppuccin-gtk, ... }: let
+    system = "x86_64-linux";
+  in {
+    homeConfigurations.me = ... {
+      home.packages = [
+        catppuccin-gtk.packages.${system}.default
+      ];
+    };
+  };
+}
+```
+
 &nbsp;
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
